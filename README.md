@@ -1,47 +1,54 @@
-
 # ✈️ Autonomous AI Travel Planner
 
 An intelligent AI-powered travel planner that generates personalized travel itineraries using Retrieval-Augmented Generation (RAG), FastAPI, FAISS vector database, and Streamlit.
 
 This system retrieves real travel information from a custom knowledge base and generates realistic travel plans including daily itinerary, budget estimation, hotel suggestions, and travel tips.
 
----
-
 # 🚀 Features
 
-- 🧠 AI-powered itinerary generation using RAG
-- 📅 Day-wise structured travel plan
-- 💰 Budget estimation and breakdown
-- 🏨 Hotel suggestions (Luxury / Mid / Budget)
-- 📍 Uses real travel data from knowledge base
-- ⚡ FastAPI backend for scalable API
-- 🎨 Streamlit frontend with modern UI
-- 🔎 FAISS vector search for semantic retrieval
-- 📖 Travel tips and recommendations
+🧠 AI-powered itinerary generation using RAG
 
----
+📅 Day-wise structured travel plan
+
+💰 Budget estimation and breakdown
+
+🏨 Hotel suggestions (Luxury / Mid / Budget)
+
+📍 Uses real travel data from knowledge base
+
+⚡ FastAPI backend for scalable API
+
+🎨 Streamlit frontend with modern UI
+
+🔎 FAISS vector search for semantic retrieval
+
+📖 Travel tips and recommendations
 
 # 🧠 How It Works (RAG Pipeline)
 
-1. Travel data stored in `tourism_india.txt`
-2. Text is split into chunks
-3. Chunks converted into embeddings using Sentence Transformers
-4. Stored in FAISS vector database
-5. User query converted into embedding
-6. Relevant chunks retrieved using vector search
-7. LLM generates accurate itinerary based on retrieved context
-8. Result sent to frontend and displayed
+Travel data is stored in tourism_india.txt
 
-This ensures accurate, real-world travel plans.
+Text is split into smaller chunks
 
----
+Each chunk is converted into embeddings using Sentence Transformers
+
+Embeddings are stored in FAISS vector database
+
+User query is converted into embedding
+
+Relevant travel data is retrieved using vector similarity search
+
+LLM generates itinerary based on retrieved context
+
+Final response is sent to frontend and displayed
+
+This ensures accurate, realistic, and context-aware travel plans.
 
 # 🏗️ Project Architecture
 
-
 User Input (Streamlit UI)
 ↓
-FastAPI Backend (/query)
+FastAPI Backend (/query endpoint)
 ↓
 RAG Pipeline
 ↓
@@ -51,84 +58,104 @@ Retrieve travel knowledge
 ↓
 LLM generates itinerary
 ↓
-Response sent to frontend
-
-
----
+Response returned to frontend
 
 # 🛠️ Tech Stack
-
 ## Frontend
-- Streamlit
-- Python
+
+Streamlit
+
+Python
 
 ## Backend
-- FastAPI
-- Python
+
+FastAPI
+
+Python
 
 ## AI / RAG
-- Groq LLM
-- Sentence Transformers
-- FAISS Vector Database
 
-## Database
-- SQLite (optional)
+Groq LLM
 
----
+Sentence Transformers
+
+FAISS Vector Database
+
+## Database (Optional)
+
+SQLite
+
+📂 Project Structure
+ai_travel_planner/
+│
+├── backend/
+│   ├── database/
+│   │   ├── db.py
+│   │   └── dep.py
+│   │
+│   ├── models/
+│   │   ├── pydantic.py
+│   │   └── table.py
+│   │
+│   ├── services/
+│   │   └── rag.py
+│   │
+│   ├── routes/
+│   │   └── routes.py
+│   │
+│   └── main.py
+│
+├── frontend/
+│   └── app.py
+│
+├── data/
+│   └── tourism_india.txt
+└── README.md
 
 # ⚙️ Installation
-
-## Clone Repository
-
-```bash
+Clone Repository
 git clone https://github.com/YOUR_USERNAME/ai_travel_planner.git
 cd ai_travel_planner
+
 Create Virtual Environment
-bash
-Copy code
 python -m venv .venv
+
 Activate Virtual Environment
 Windows
-bash
-Copy code
 .venv\Scripts\activate
+
 Mac / Linux
-bash
-Copy code
 source .venv/bin/activate
+
 Install Dependencies
-bash
-Copy code
 pip install -r requirements.txt
+
 ▶️ Run Backend (FastAPI)
-bash
-Copy code
 cd backend
 uvicorn main:app --reload
-Backend will run at:
 
-cpp
-Copy code
+
+Backend runs at:
+
 http://127.0.0.1:8000
+
 ▶️ Run Frontend (Streamlit)
-bash
-Copy code
 cd frontend
 streamlit run app.py
-Frontend will run at:
 
-arduino
-Copy code
+
+Frontend runs at:
+
 http://localhost:8501
+
 🔐 Environment Variables
-Set your API key securely:
 
-ini
-Copy code
+Set your Groq API key securely:
+
 GROQ_API_KEY=your_api_key_here
-⚠️ Do NOT hardcode API keys in the source code.
 
-📊 Example Output
+# 📊 Example Output
+
 The system generates:
 
 Best Time to Visit
@@ -143,8 +170,9 @@ Travel tips
 
 Hotel suggestions
 
-🌍 Deployment
-Backend can be deployed on:
+# 🌍 Deployment
+
+Backend deployment options:
 
 Render
 
@@ -152,11 +180,12 @@ Railway
 
 AWS
 
-Frontend can be deployed on:
+Frontend deployment options:
 
 Streamlit Cloud
 
-🎯 Use Cases
+# 🎯 Use Cases
+
 AI Travel Planner
 
 Tourism Recommendation System
@@ -167,20 +196,7 @@ RAG Learning Project
 
 Intelligent Travel Assistant
 
-🔮 Future Improvements
-User authentication system
+# 👩‍💻 Author
 
-Save trip history
-
-PDF export functionality
-
-Google Maps integration
-
-Flight and hotel booking integration
-
-Multi-country support
-
-👩‍💻 Author
-Stanisya Reeni
-MCA Student
-AI / GenAI Developer
+## Stanisya Reeni
+## MCA Student
