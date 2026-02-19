@@ -81,68 +81,36 @@ Response returned to frontend
 
 - FAISS Vector Database
 
-## Database (Optional)
+## Database 
 
 - SQLite
 
-📂 Project Structure
-ai_travel_planner/
-│
-├── backend/
-│   ├── database/
-│   │   ├── db.py
-│   │   └── dep.py
-│   │
-│   ├── models/
-│   │   ├── pydantic.py
-│   │   └── table.py
-│   │
-│   ├── services/
-│   │   └── rag.py
-│   │
-│   ├── routes/
-│   │   └── routes.py
-│   │
-│   └── main.py
-│
-├── frontend/
-│   └── app.py
-│
-├── data/
-│   └── tourism_india.txt
-└── README.md
-
 # ⚙️ Installation
-Clone Repository
-git clone https://github.com/YOUR_USERNAME/ai_travel_planner.git
+- Clone Repository
+git clone https://github.com/stanisyareeni23/ai_travel_planner.git
 cd ai_travel_planner
 
-Create Virtual Environment
+- Create Virtual Environment
 python -m venv .venv
 
-Activate Virtual Environment
+- Activate Virtual Environment
 Windows
 .venv\Scripts\activate
 
-Mac / Linux
-source .venv/bin/activate
-
-Install Dependencies
+- Install Dependencies
 pip install -r requirements.txt
 
-▶️ Run Backend (FastAPI)
+# ▶️ Run Backend (FastAPI)
 cd backend
 uvicorn main:app --reload
-
 
 Backend runs at:
 
 http://127.0.0.1:8000
 
-▶️ Run Frontend (Streamlit)
+# ▶️ Run Frontend (Streamlit)
 cd frontend
 streamlit run app.py
-
 
 Frontend runs at:
 
@@ -158,43 +126,39 @@ GROQ_API_KEY=your_api_key_here
 
 The system generates:
 
-Best Time to Visit
+- Best Time to Visit
 
-Estimated Budget
+- Estimated Budget
 
-Day-wise itinerary
+- Day-wise itinerary
 
-Budget breakdown
+- Budget breakdown
 
-Travel tips
+- Travel tips
 
-Hotel suggestions
+- Hotel suggestions
 
 # 🌍 Deployment
 
 Backend deployment options:
 
-Render
-
-Railway
-
-AWS
+- Render
 
 Frontend deployment options:
 
-Streamlit Cloud
+- Streamlit Cloud
 
 # 🎯 Use Cases
 
-AI Travel Planner
+- AI Travel Planner
 
-Tourism Recommendation System
+- Tourism Recommendation System
 
-GenAI Portfolio Project
+- GenAI Portfolio Project
 
-RAG Learning Project
+- RAG Learning Project
 
-Intelligent Travel Assistant
+- Intelligent Travel Assistant
 
 # 👩‍💻 Author
 
