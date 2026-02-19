@@ -88,7 +88,6 @@ Response returned to frontend
 # ⚙️ Installation
 - Clone Repository
 git clone https://github.com/stanisyareeni23/ai_travel_planner.git
-cd ai_travel_planner
 
 - Create Virtual Environment
 python -m venv .venv
