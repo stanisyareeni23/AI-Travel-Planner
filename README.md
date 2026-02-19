@@ -26,23 +26,23 @@ This system retrieves real travel information from a custom knowledge base and g
 
 # 🧠 How It Works (RAG Pipeline)
 
-Travel data is stored in tourism_india.txt
+1. Travel data is stored in tourism_india.txt
 
-Text is split into smaller chunks
+2. Text is split into smaller chunks
 
-Each chunk is converted into embeddings using Sentence Transformers
+3. Each chunk is converted into embeddings using Sentence Transformers
 
-Embeddings are stored in FAISS vector database
+4. Embeddings are stored in FAISS vector database
 
-User query is converted into embedding
+5. User query is converted into embedding
 
-Relevant travel data is retrieved using vector similarity search
+6. Relevant travel data is retrieved using vector similarity search
 
-LLM generates itinerary based on retrieved context
+7. LLM generates itinerary based on retrieved context
 
-Final response is sent to frontend and displayed
+8. Final response is sent to frontend and displayed
 
-This ensures accurate, realistic, and context-aware travel plans.
+9. This ensures accurate, realistic, and context-aware travel plans.
 
 # 🏗️ Project Architecture
 
@@ -63,27 +63,27 @@ Response returned to frontend
 # 🛠️ Tech Stack
 ## Frontend
 
-Streamlit
+- Streamlit
 
-Python
+- Python
 
 ## Backend
 
-FastAPI
+- FastAPI
 
-Python
+- Python
 
 ## AI / RAG
 
-Groq LLM
+- Groq LLM
 
-Sentence Transformers
+- Sentence Transformers
 
-FAISS Vector Database
+- FAISS Vector Database
 
 ## Database (Optional)
 
-SQLite
+- SQLite
 
 📂 Project Structure
 ai_travel_planner/
@@ -198,5 +198,5 @@ Intelligent Travel Assistant
 
 # 👩‍💻 Author
 
-## Stanisya Reeni
-## MCA Student
+Stanisya Reeni
+MCA Student
