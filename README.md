@@ -76,93 +76,59 @@ Response sent to frontend
 
 ---
 
-# 📂 Project Structure
-
-ai_travel_planner/
-│
-├── backend/
-│   │
-│   ├── database/
-│   │   ├── db.py             → DB / vector connection
-│   │   └── dep.py            → Dependency injection
-│   │
-│   ├── models/
-│   │   ├── pydantic.py       → Request/response schemas
-│   │   └── table.py          → SQLAlchemy tables (optional)
-│   │
-│   ├── services/
-│   │   └── rag.py            → FAISS + RAG Logic
-│   │
-│   ├── routes/
-│   │   └── routes.py         → API endpoints
-│   │
-│   └── main.py               → FastAPI app entry
-│
-├── frontend/
-│   └── app.py                → Streamlit UI
-│
-├── data/
-    ├── tourism_india.txt    
-
-
-
----
-
 # ⚙️ Installation
 
-## Clone repository
+## Clone Repository
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/ai_travel_planner.git
 cd ai_travel_planner
-
-Create virtual environment
+Create Virtual Environment
+bash
+Copy code
 python -m venv .venv
-
-
-Activate:
-
-Windows:
-
+Activate Virtual Environment
+Windows
+bash
+Copy code
 .venv\Scripts\activate
-
-
-Mac/Linux:
-
+Mac / Linux
+bash
+Copy code
 source .venv/bin/activate
-
-Install dependencies
+Install Dependencies
+bash
+Copy code
 pip install -r requirements.txt
-
-▶️ Run Backend
+▶️ Run Backend (FastAPI)
+bash
+Copy code
 cd backend
 uvicorn main:app --reload
+Backend will run at:
 
-
-Backend runs at:
-
+cpp
+Copy code
 http://127.0.0.1:8000
-
-▶️ Run Frontend
+▶️ Run Frontend (Streamlit)
+bash
+Copy code
 cd frontend
 streamlit run app.py
+Frontend will run at:
 
-
-Frontend runs at:
-
+arduino
+Copy code
 http://localhost:8501
-
 🔐 Environment Variables
-
 Set your API key securely:
 
+ini
+Copy code
 GROQ_API_KEY=your_api_key_here
-
-
-Do NOT hardcode API keys.
+⚠️ Do NOT hardcode API keys in the source code.
 
 📊 Example Output
-
 The system generates:
 
 Best Time to Visit
@@ -178,7 +144,6 @@ Travel tips
 Hotel suggestions
 
 🌍 Deployment
-
 Backend can be deployed on:
 
 Render
@@ -192,24 +157,22 @@ Frontend can be deployed on:
 Streamlit Cloud
 
 🎯 Use Cases
-
 AI Travel Planner
 
-Tourism recommendation system
+Tourism Recommendation System
 
-GenAI portfolio project
+GenAI Portfolio Project
 
-RAG learning project
+RAG Learning Project
 
-Intelligent assistant systems
+Intelligent Travel Assistant
 
 🔮 Future Improvements
-
-User login system
+User authentication system
 
 Save trip history
 
-PDF export
+PDF export functionality
 
 Google Maps integration
 
@@ -218,7 +181,6 @@ Flight and hotel booking integration
 Multi-country support
 
 👩‍💻 Author
-
 Stanisya Reeni
 MCA Student
 AI / GenAI Developer
