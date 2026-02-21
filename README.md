@@ -161,5 +161,4 @@ Frontend deployment options:
 
 # 👩‍💻 Author
 
-Stanisya Reeni
-MCA Student
+Stanisya Reeni\MCA Student
